@@ -1,0 +1,29 @@
+<H1>Les six premiers pokémon : </H1>
+<mat-grid-list cols="3" >
+
+    <mat-grid-tile *ngFor="let pokemon of pokemons">
+
+    <mat-card class="example-card">
+        <img mat-card-image [src]="pokemon.image" alt="pokemon.image">
+    <mat-card-header>
+        <mat-card-title>{{pokemon.name}}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+      <p> Catégorie : {{pokemon.category}}</p>
+      <mat-divider></mat-divider>
+      <p> Type : {{pokemon.type}}</p>
+      <mat-divider></mat-divider>
+      <p> Size : {{pokemon.height}}m</p>
+      <mat-divider></mat-divider>
+      <p> Poids : {{pokemon.weight}}Kg </p>
+      <mat-divider></mat-divider>
+      </mat-card-content>
+      </mat-card>
+      </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+
+<router-outlet></router-outlet>
